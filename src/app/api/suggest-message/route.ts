@@ -1,7 +1,8 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+const key = process.env.OPENAI_API_KEY as string;
 
-const genAI = new GoogleGenerativeAI("AIzaSyAf61goeFziI7H9cMRqKFmzjT_YfRdyAQs");
+const genAI = new GoogleGenerativeAI(key);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 // const prompt = "Hello GEmini";
